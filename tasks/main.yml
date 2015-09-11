@@ -2,6 +2,7 @@
 # tasks file for LukeT.ghost
 
 - name: Grab {{ ghost_ver }} version of Ghost.
+  sudo: false
   local_action: command /usr/bin/curl -L https://ghost.org/zip/ghost-{{ ghost_ver }}.zip -o ghost.zip
 
 - name: Update apt for latest node versions
